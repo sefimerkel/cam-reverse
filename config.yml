@@ -1,5 +1,5 @@
 # Configuration for cam-reverse
-# Use broadcast discovery to find ALL cameras automatically
+# High-quality video streaming configuration
 
 http_server:
   port: 5000
@@ -9,10 +9,23 @@ logging:
   use_color: true
 
 cameras:
-  # Leave empty - cameras will be auto-discovered
-  # Add specific configs only if needed for rotation/mirror
+  # Your main A9 PTZ camera - highest quality
+  PTZC658937AAQSZ:
+    alias: "My PTZ Camera"
+    rotate: 0
+    mirror: false
+    audio: true    # Enable audio
+    fix_packet_loss: true
+  
+  # Second camera
+  BATF150915DTMNZ:
+    alias: "Second Camera"
+    rotate: 0
+    mirror: false
+    audio: true    # Enable audio
+    fix_packet_loss: true
 
-# Use ONLY broadcast for discovery - this finds all camera types
+# Use broadcast discovery to find all cameras
 discovery_ips:
   - 192.168.1.255   # Broadcast - finds all cameras on the network
 
