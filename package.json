@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@types/yargs": "^17.0.32",
-    "esbuild": "^0.20.2",
+    "esbuild": "^0.28.0",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"

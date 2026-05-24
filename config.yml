@@ -1,0 +1,19 @@
+# Configuration for cam-reverse
+# Use broadcast discovery to find ALL cameras automatically
+
+http_server:
+  port: 5000
+
+logging:
+  level: info
+  use_color: true
+
+cameras:
+  # Leave empty - cameras will be auto-discovered
+  # Add specific configs only if needed for rotation/mirror
+
+# Use ONLY broadcast for discovery - this finds all camera types
+discovery_ips:
+  - 192.168.1.255   # Broadcast - finds all cameras on the network
+
+blacklisted_ips: []
